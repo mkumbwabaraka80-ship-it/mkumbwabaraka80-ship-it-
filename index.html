@@ -1,82 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Baraka Mkumbwa | Software Developer</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
-body{background:#0f172a;color:white;padding:20px;transition:0.3s}
-.hero{text-align:center;padding:50px 20px}
-.hero h1{font-size:42px;color:#38bdf8;margin-bottom:10px}
-.hero p{color:#94a3b8;font-size:18px;margin-bottom:25px}
-.btn{background:#38bdf8;color:#0f172a;padding:12px 25px;border-radius:30px;text-decoration:none;font-weight:bold;display:inline-block;margin:5px}
-.card{background:#1e293b;padding:30px;border-radius:20px;margin:20px auto;max-width:700px}
-.card h2{text-align:center;margin-bottom:15px}
-.skills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:15px}
-.skills span{background:#0f172a;padding:8px 15px;border-radius:20px;border:1px solid #38bdf8;color:#38bdf8}
-.project{background:#0f172a;padding:15px;border-radius:12px;margin-top:15px;border-left:4px solid #38bdf8}
-a{color:#38bdf8}
-</style>
-</head>
-<body>
+<div class="service">
+<div style="font-size:30px">💦</div>
+<div style="flex:1"><b>Simu Iliyoingia Maji</b><br>Bei kuanzia 10,000<br><small>Tunafufua 90%</small></div>
+<button class="btn-add" style="background:#25D366;width:auto" onclick="addCart('HUDUMA: Maji')">Book</button>
+</div>
 
-<button onclick="changeColor()" style="position:fixed; top:10px; right:10px; padding:10px 15px; border-radius:20px; border:none; background:#38bdf8; font-weight:bold; cursor:pointer; z-index:999;">Badilisha Rangi</button>
+<div id="cart">
+<button style="background:#334155;color:white" onclick="clearCart()">🗑️ Futa (<span id="count">0</span>)</button>
+<button style="background:#25D366;color:white" onclick="orderWhatsApp()">💬 Tuma WhatsApp</button>
+</div>
 
 <script>
-function changeColor(){
-  if(document.body.style.background == 'white'){
-    document.body.style.background = '#0f172a';
-    document.body.style.color = 'white';
-  } else {
-    document.body.style.background = 'white';
-    document.body.style.color = 'black';
-  }
+let cart=[];
+function addCart(i){cart.push(i);document.getElementById('count').innerText=cart.length;alert(i+' ✓');}
+function clearCart(){cart=[];document.getElementById('count').innerText=0;}
+function orderWhatsApp(){
+ if(cart.length==0){alert('Chagua bidhaa kwanza!');return;}
+ let msg='Habari Fundi! 🔧%0A%0ANaomba:%0A'+cart.join('%0A')+'%0A%0ANamba yangu: %0A Mahali: ';
+ window.open('https://wa.me/255657200426 text='+msg,'_blank');
 }
 </script>
-
-<div class="hero">
-<h1>Baraka Mkumbwa</h1>
-<p>Software Developer | morogoro, Tanzania</p>
-<p style="max-width:600px;margin:10px auto;color:#cbd5e1">I'm a passionate developer building modern web applications. I love creating solutions for students and businesses.</p>
-<a href="https://github.com/mkumbwabaraka80-ship-it" class="btn">GitHub</a>
-<a href="mailto:mkumbwabaraka80@gmail.com" class="btn">Contact Me</a>
-</div>
-<div class="project">
-<img src="project1.jpg" style="width:100%; border-radius:10px; margin-bottom:10px;">
-<h3> Portfolio Website</h3>
-<p>Live now! Built with HTML, CSS and GitHub Pages. Sasa na JavaScript ya kwanza!</p>
-<a<div class="card" style="border:2px dashed #38bdf8; margin-top:20px;">
-<h2>About Me</h2>
-<p style="text-align:center;color:#cbd5e1">Developer from TDM-MORO TZ. Focused on building Mwanafunzi Hub and other web platforms.</p>
-<div class="card">
-<h2>Projects</h2>
-<div class="project">
-<h3>🚀 Portfolio Website</h3>
-<p>Live now! Built with HTML, CSS and GitHub Pages. Sasa na JavaScript ya kwanza!</p>
-<a href="https://mkumbwabaraka80-ship-it.github.io/mkumbwabaraka80-ship-it-/">View Live</a>
-</div>
-<div class="project">
-<h3>🎓 Mwanafunzi Hub - Coming Soon</h3>
-<p>Platform ya kumsaidia mwanafunzi wa Tanzania kupata notes, past papers na guidance.</p>
-</div>
-</div>
-
-<div class="card" style="border:2px dashed #38bdf8; text-align:center;">
-<h2>📢 Huduma Zangu</h2>
-<p style="margin-top:10px;">Nakutengenezea Website kama hii kwa TZS 10000 tu!</p>
-<a href="https://wa.me/255759758911" style="background:#38bdf8; color:#0f172a; padding:10px 20px; border-radius:20px; text-decoration:none; display:inline-block; margin-top:15px; font-weight:bold;">Nicheki WhatsApp</a>
-</div>
-
-</div>
-<div class="project">
-<h3>📚 Mwanafunzi Hub - Coming Soon</h3>
-<p>Platform ya kumsaidia mwanafunzi wa Tanzania kupata notes, past papers na guidance.</p>
-</div>na masuala mengine ya IT kwenye simu zenye changa moto
-</div>
-
-<div class="card" style="text-align:center">
-<p>© 2026 Baraka Mkumbwa. Built with ❤️ in Dar.</p>
-</div>
 </body>
-  </html
+</html>-fa07a98d237
