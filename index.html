@@ -1,121 +1,78 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sw">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aman Phone Doctor - Accessories & Matengenezo</title>
+<title>Aman Phone Doctor - Fundi Dar</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:sans-serif;background:#f1f5f9;padding-bottom:120px}
-.hero{
- background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url('https://images.unsplash.com/photo-1580894908361-967195033215?w=600');
- background-size:cover;background-position:center;
- padding:40px 15px;text-align:center;color:white;img PXL_20260130_230923922.NIGHT.jpg:cover}
-.hero h1{margin:10px 0 5px 0}
-.hero p{margin:5px 0;color:#e2e8f0}
-.btns{display:flex;gap:10px;justify-content:center;margin-top:15px}
-.btn-call{padding:12px 20px;border-radius:25px;border:none;font-weight:bold;text-decoration:none;display:inline-block}
-.wa{background:#25D366;color:white}
-.call{background:white;color:#0f172a}
-.sec{padding:10px}
-.cat{background:#0f172a;color:#38bdf8;padding:10px 15px;border-radius:10px;margin:15px 10px 5px 10px;font-weight:bold}
+*{box-sizing:border-box}body{margin:0;font-family:sans-serif;background:#f1f5f9;padding-bottom:120px}
+.hero{position:relative;text-align:center;color:white;background:#000}
+.hero-bg{width:100%;height:400px;object-fit:cover;opacity:0.6}
+.hero-content{position:absolute;top:0;left:0;right:0;padding:30px 15px}
+.avatar{width:115px;height:115px;border-radius:50%;border:4px solid #25D366;object-fit:cover}
+.btns{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.btn-call{padding:13px 24px;border-radius:30px;text-decoration:none;font-weight:bold;display:inline-block}
+.wa{background:#25D366;color:white} .call{background:white;color:#0f172a}
+.cat{background:#0f172a;color:#38bdf8;padding:11px 15px;border-radius:10px;margin:15px 10px 5px 10px;font-weight:bold}
 .product{background:white;margin:10px;border-radius:15px;display:flex;gap:12px;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,0.1)}
-.product img{width:90px;height:90px;border-radius:12px;object-fit:cover}
-.price{color:#0ea5e9;font-weight:bold;font-size:17px}
-.btn-add{background:#0f172a;color:white;border:none;padding:8px 14px;border-radius:8px;font-weight:bold;margin-top:6px;width:100%}
+.product img{width:90px;height:90px;border-radius:12px;object-fit:cover;background:#e2e8f0}
+.price{color:#0ea5e9;font-weight:bold;font-size:17px} .btn-add{background:#0f172a;color:white;border:none;padding:9px 14px;border-radius:8px;font-weight:bold;margin-top:6px;width:100%}
+.stock{background:white;margin:10px;border-radius:15px;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,0.1);text-align:center}
+.stock img{width:100%;border-radius:12px;max-height:400px;object-fit:contain}
 .service{background:linear-gradient(135deg,#0f172a,#1e40af);color:white;margin:10px;border-radius:15px;padding:15px;display:flex;gap:12px;align-items:center}
-#cart{position:fixed;bottom:0;left:0;right:0;background:#0f172a;color:white;padding:10px;display:flex;gap:8px}
+#cart{position:fixed;bottom:0;left:0;right:0;background:#0f172a;color:white;padding:12px;display:flex;gap:8px;z-index:99}
 #cart button{flex:1;padding:14px;border:none;border-radius:12px;font-weight:bold;font-size:16px}
 </style>
 </head>
 <body>
 
 <div class="hero">
-
-</>
+ <img cPXL_20260130_230923922.NIGHT.jpg">
+<img class="hero-bg" src="Img.jpg">
+<div class="hero-content">
+<img class="avatar" src="Img.jpg">
 <h1>AMAN PHONE DOCTOR 📱</h1>
-<p>🔧 Fundi wa Simu | Accessories Original</p>
-<p>📍 morogoro - Tunatengeneza kwa uwaminifu mkubwa!</p>
+<p>Fundi Mahiri | Dar es Salaam<br>Tunatengeneza Mbele Yako - Uaminifu!</p>
 <div class="btns">
-<a class="btn-call wa" href="https://wa.me/255657200426">WhatsApp</a>
-<a class="btn-call call" href="tel:+255759758911">📞 0759758911</a>
+<a class="btn-call wa" href="https://api.whatsapp.com/send?phone=255657200426&text=Habari%20Fundi%20Aman">💬 WhatsApp: 0657 200 426</a>
+<a class="btn-call call" href="tel:0759758911">📞 0759 758 911</a>
+</div>
 </div>
 </div>
 
-<div class="cat">tunaweka vioo,protector & stikava</div>
+<div class="cat">🔥 STOCK YETU LEO - HALISI</div>
+<div class="stock">
+<img src="PXL_20260130_230923922.NIGHT.jpg">
+<p><b>Simu Mpya Original - Samsung / iPhone</b><br><span style="color:#0ea5e9;font-weight:bold">Bei Nafuu - Warranty 1 Year</span><br>Original kama pichani!</p>
+<button class="btn-add" style="background:#25D366" onclick="addCart('Simu Mpya - Naomba Bei')">Uliza Bei WhatsApp</button>
+</div>
 
+<div class="stock">
+<img src="PXL_20260621_162534951.NIGHT.jpg">
+<p><b>Accessories & Covers Original</b><br><span style="color:#0ea5e9">Stock tele - Dar</span></p>
+<button class="btn-add" style="background:#25D366" onclick="addCart('Accessories Stock')">Uliza Bei</button>
+</div>
+
+<div class="cat">🛡️ KIOO & KAVA</div>
 <div class="product">
 <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=300">
-<div style="flex:1"><b>Kioo cha Ulinzi 9D</b><br><span class="price">TZS 5,000</span><br>Simu zote<br><button class="btn-add" onclick="addCart('Kioo 9D - 5k')">Weka</button></div>
+<div style="flex:1"><b>Kioo cha Ulinzi 9D</b><br><span class="price">TZS 5,000</span><br>Simu zote<br><button class="btn-add" onclick="addCart('Kioo 9D - 5k')">Weka 🛒</button></div>
 </div>
-
 <div class="product">
-<img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300">
-<div style="flex:1"><b>Cover za Simu - iPhone/Samsung</b><br><span class="price">TZS 10,000</span><br>Leather & Silicon<br><button class="btn-add" onclick="addCart('Cover - 10k')">Weka</button></div>
+<img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?w=300">
+<div style="flex:1"><b>Cover za Simu Kali</b><br><span class="price">TZS 10,000</span><br>iPhone / Samsung<br><button class="btn-add" onclick="addCart('Cover - 10k')">Weka 🛒</button></div>
 </div>
 
-<div class="cat">🔌 CHAJA & CABLE</div>
-
+<div class="cat">🔌 CHAJA & POWER BANK</div>
 <div class="product">
-<img src="https://images.unsplash.com/photo-1583394838336-acd43073687b?w=300">
-<div style="flex:1"><b>Chaja Fast Charge 33W</b><br><span class="price">TZS 15,000</span><br>Type-C & iPhone<br><button class="btn-add" onclick="addCart('Chaja 33W - 15k')">Weka</button></div>
+<img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=300">
+<div style="flex:1"><b>Chaja Fast 33W</b><br><span class="price">TZS 15,000</span><br>Type-C & iPhone<br><button class="btn-add" onclick="addCart('Chaja 33W - 15k')">Weka 🛒</button></div>
 </div>
-
 <div class="product">
-<img src="https://images.unsplash.com/photo-1625155840669-c6b88d3b5ac3?w=300">
-<div style="flex:1"><b>Cable 3-in-1 Original</b><br><span class="price">TZS 8,000</span><br>1M Fast<br><button class="btn-add" onclick="addCart('Cable 3in1 - 8k')">Weka</button></div>
+<img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=300">
+<div style="flex:1"><b>Power Bank 20000mAh</b><br><span class="price">TZS 35,000</span><br>22.5W Super Fast<br><button class="btn-add" onclick="addCart('Power Bank 20k - 35k')">Weka 🛒</button></div>
 </div>
 
-<div class="product">
-<img src="https://images.unsplash.com/photo-1592899677977-9bb10ba128a5?w=300">
-<div style="flex:1"><b>Power Bank 20000mAh</b><br><span class="price">TZS 35,000</span><br>22.5W Super Fast<br><button class="btn-add" onclick="addCart('Power Bank 20k - 35k')">Weka</button></div>
-</div>
-
-<div class="cat">🎧 EARPHONES & AIRPODS</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?w=300">
-<div style="flex:1"><b>AirPods Pro 2 - ANC</b><br><span class="price">TZS 45,000</span><br>Bass kali<br><button class="btn-add" onclick="addCart('AirPods Pro - 45k')">Weka</button></div>
-</div>
-
+<div class="cat">🎧 EARPHONES & SPEAKER</div>
 <div class="product">
 <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=300">
-<div style="flex:1"><b>Bluetooth Speaker Mini</b><br><span class="price">TZS 25,000</span><br>Bass Boom<br><button class="btn-add" onclick="addCart('Speaker Mini - 25k')">Weka</button></div>
-</div>
-
-<div class="cat">🔧 HUDUMA ZA FUNDI</div>
-
-<div class="service">
-<div style="font-size:30px">📱</div>
-<div style="flex:1"><b>Kubadilisha Kioo & Touch</b><br>Bei kuanzia 35000<br><small>Fundi bora - Dk 30</small></div>
-<button class="btn-add" style="background:#25D366;width:auto" onclick="addCart('HUDUMA: Kubadilisha Kioo')">Book</button>
-</div>
-
-<div class="service">
-<div style="font-size:30px">🔋</div>
-<div style="flex:1"><b>Kubadilisha Betri</b><br>Bei kuanzia 15,000<br><small>Original + Warranty</small></div>
-<button class="btn-add" style="background:#25D366;width:auto" onclick="addCart('HUDUMA: Betri')">Book</button>
-</div>
-
-<div class="service">
-<div style="font-size:30px">💦</div>
-<div style="flex:1"><b>Simu Iliyoingia Maji</b><br>Bei kuanzia 10,000<br><small>Tunafufua 90%</small></div>
-<button class="btn-add" style="background:#25D366;width:auto" onclick="addCart('HUDUMA: Maji')">Book</button>
-</div>
-
-<div id="cart">
-<button style="background:#334155;color:white" onclick="clearCart()">🗑️ Futa (<span id="count">0</span>)</button>
-<button style="background:#25D366;color:white" onclick="orderWhatsApp()">💬 Tuma WhatsApp</button>
-</div>
-
-<script>
-let cart=[];
-function addCart(i){cart.push(i);document.getElementById('count').innerText=cart.length;alert(i+' ✓');}
-function clearCart(){cart=[];document.getElementById('count').innerText=0;}
-function orderWhatsApp(){
- if(cart.length==0){alert('Chagua bidhaa kwanza!');return;}
- let msg='Habari Fundi! 🔧%0A%0ANaomba:%0A'+cart.join('%0A')+'%0A%0ANamba yangu: %0A Mahali: ';
- window.open('https://wa.me/255759758911 text='+msg,'_blank');
-}
-</script>
-</body>
-</html>-fa07a98d237
+<div style="flex:1"><b>AirPods Pro 2 - ANC</b><br><span class="price">TZS 45,000</span><br>Bass kali<br><button class="btn-add" onclick="addCart('AirPods Pro - 45k')">Weka 🛒</button
